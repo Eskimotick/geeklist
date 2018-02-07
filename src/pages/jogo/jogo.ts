@@ -10,16 +10,18 @@ import { List } from '../list';
 export class JogoPage {
 
   itens: Item[] = [
-   { id: 1, name: 'The Legend of Zelda: Breath of the Wild'},
-   { id: 1, name: 'Super Mario Odissey'},
-   { id: 2, name: 'FIFA 18'},
-   { id: 2, name: 'Need for Speed Payback'}
- ];
+     { id: 1, name: 'The Legend of Zelda: Breath of the Wild'},
+     { id: 1, name: 'Super Mario Odissey'},
+     { id: 2, name: 'FIFA 18'},
+     { id: 2, name: 'Need for Speed Payback'},
+     { id: 3, name: 'The Witcher 3: Wild Hunt'}
+   ];
 
-  lists: List[] = [
-    { id: 1, name: 'Quero comprar esse ano'},
-    { id: 2, name: 'Emprestados do Bruno'}
-];
+    lists: List[] = [
+      { id: 1, name: 'Lista de desejos'},
+      { id: 2, name: 'Jogados'},
+      { id: 3, name: 'Não jogados'}
+  ];
 
   constructor(public navCtrl: NavController) {
 

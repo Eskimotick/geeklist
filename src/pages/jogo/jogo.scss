@@ -1,5 +1,13 @@
 page-jogo {
+  font-family: "https://fonts.google.com/specimen/Mukta+Mahee";
+}
 
+ion-content {
+  background-image: url('../../assets/imgs/sticker.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 70%;
+  background-attachment: fixed;
 }
 
 #arrow {
@@ -8,4 +16,5 @@ page-jogo {
 
 ion-card.cards-list ion-card-header {
   background-color: #E0E0E0;
+  font-size: 1.3em;
 }

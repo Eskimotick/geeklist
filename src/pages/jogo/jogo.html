@@ -10,17 +10,17 @@
     <br>
     <ion-card class="cards-list">
       <ion-card-header *ngIf="list">
-        {{ list.name }}
+        <b>{{ list.name }}</b>
       </ion-card-header>
       <ion-list>
-        <button ion-item>
-          <div *ngFor='let item of itens'>
+        <div *ngFor='let item of itens'>
             <div *ngIf='(item.id == list.id)'>
-              {{ item.name }}
-              <ion-icon name="arrow-forward" id="arrow" item-end></ion-icon>
+              <button ion-item>
+                {{ item.name }}
+                <ion-icon name="arrow-forward" id="arrow" item-end></ion-icon>
+              </button>
             </div>
-          </div>
-        </button>
+        </div>
       </ion-list>
     </ion-card>
   </div>

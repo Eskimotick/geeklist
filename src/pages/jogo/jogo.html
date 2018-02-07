@@ -5,7 +5,21 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content class="cards-bg">
+  <div *ngFor='let list of lists'>
+    <br>
+    <ion-card class="cards-list">
+      <ion-card-header>
+        {{ list.name }}
+      </ion-card-header>
+      <ion-list>
+        <button ion-item>
+          <div *ngFor='let item of itens'>
 
-<ion-content>
-
+            <ion-icon name="arrow-forward" id="arrow" item-end></ion-icon>
+          </div>
+        </button>
+      </ion-list>
+    </ion-card>
+  </div>
 </ion-content>

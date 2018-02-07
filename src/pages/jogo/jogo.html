@@ -9,14 +9,16 @@
   <div *ngFor='let list of lists'>
     <br>
     <ion-card class="cards-list">
-      <ion-card-header>
+      <ion-card-header *ngIf="list">
         {{ list.name }}
       </ion-card-header>
       <ion-list>
         <button ion-item>
           <div *ngFor='let item of itens'>
-
-            <ion-icon name="arrow-forward" id="arrow" item-end></ion-icon>
+            <div *ngIf='(item.id == list.id)'>
+              {{ item.name }}
+              <ion-icon name="arrow-forward" id="arrow" item-end></ion-icon>
+            </div>
           </div>
         </button>
       </ion-list>

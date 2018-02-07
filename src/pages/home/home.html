@@ -1,13 +1,12 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Minhas Listas</ion-title>
   </ion-navbar>
 </ion-header>
 
+<ion-tabs>
+  <ion-tab [root]="tab2Root" tabTitle="Jogo" tabIcon="home"></ion-tab>
+</ion-tabs>
+
 <ion-content padding>
-  <ion-list inset>
-    <button ion-item *ngFor="let list of lists">
-     {{ list }}
-    </button> 
-  </ion-list>
 </ion-content>

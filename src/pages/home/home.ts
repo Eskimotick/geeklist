@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { JogoPage } from '../jogo/jogo';
 
 @Component({
   selector: 'page-home',
@@ -7,9 +8,7 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-	lists = ['list1', 
- 	'list2',
- 	'list3'];
+    tab2Root = JogoPage;
 
   	constructor(public navCtrl: NavController) {
   }

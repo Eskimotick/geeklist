@@ -1,25 +1,14 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 
-/**
- * Generated class for the AnimePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-@IonicPage()
 @Component({
   selector: 'page-anime',
-  templateUrl: 'anime.html',
+  templateUrl: 'anime.html'
 })
 export class AnimePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController) {
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AnimePage');
   }
 
 }

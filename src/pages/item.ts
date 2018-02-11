@@ -1,4 +1,8 @@
 export class Item {
-  name: string;
-  id: number;
+    id: number;
+    name: string;
+    status: number;
+    release: number;
+    sinopse: string;
+    developer: string;
 }

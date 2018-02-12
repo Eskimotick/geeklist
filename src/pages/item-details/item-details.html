@@ -14,12 +14,47 @@
 <ion-content padding>
   <ion-card>
      <img src="http://images.eurogamer.net/2017/articles/1/8/8/7/1/7/8/zelda-breath-of-the-wild-walkthrough-guide-tips-4857-148829841233.jpg"/>
-   </ion-card>
-
-{{ itemDetails.name }}
-{{ itemDetails.release }}
-{{ itemDetails.sinopse }}
-{{ itemDetails.developer }}
+     <ion-card-content>
+     <ion-card-title text-center>
+       {{ itemDetails.title }}
+     </ion-card-title>
+     <hr>
+     <table style="width:100%">
+       <tr text-center>
+         <th>Genre:</th>
+         <td>{{ itemDetails.genre }}</td>
+       </tr>
+       <tr text-center>
+         <th>Developer:</th>
+         <td>{{ itemDetails.developer }}</td>
+       </tr>
+       <tr text-center>
+         <th>Release:</th>
+         <td>{{ itemDetails.release }}</td>
+       </tr>
+       <tr text-center>
+         <th>Rate:</th>
+         <td>{{ itemDetails.rate }}</td>
+       </tr>
+     </table>
+     <hr>
+     <button text-center ion-item>
+       Sinopsis
+       <ion-icon name="arrow-dropdown" id="arrow" item-end></ion-icon>
+     </button>
+     <!-- <div>
+       The story follows Link, who awakens from a hundred-year slumber to a mysterious voice
+        that guides him to defeat Calamity Ganon before he can destroy the kingdom of Hyrule.
+     </div> -->
+   </ion-card-content>
+  </ion-card>
+  <button float-right ion-fab mini><ion-icon float-right name="add"></ion-icon>
+    <ion-select [(ngModel)]="listas">
+      <ion-option value="lista de desejos">Lista de Desejos</ion-option>
+      <ion-option value="jogados">Jogados</ion-option>
+      <ion-option value="nao-jogados">Não Jogados</ion-option>
+    </ion-select>
+  </button>
 
 
 </ion-content>

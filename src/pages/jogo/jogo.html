@@ -14,7 +14,7 @@
       </ion-card-header>
       <ion-list>
         <div *ngFor='let item of itens'>
-            <div *ngIf='(item.status == list.id)'>
+            <div *ngIf='(item.id == list.id)'>
               <button (click)="onSelect(item)" ion-item>
                 {{ item.name }}
                 <ion-icon name="arrow-forward" id="arrow" item-end></ion-icon>

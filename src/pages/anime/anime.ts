@@ -10,10 +10,10 @@ import { List } from '../list';
 export class AnimePage {
 
   itens: Item[] = [
-     { status: 1, name: 'Future Diary'},
-     { status: 2, name: 'One Piece'},
-     { status: 2, name: 'My Hero Academy'},
-     { status: 3, name: 'Naruto'}
+     { id: 1, name: 'Future Diary'},
+     { id: 2, name: 'One Piece'},
+     { id: 2, name: 'My Hero Academy'},
+     { id: 3, name: 'Naruto'}
    ];
 
 

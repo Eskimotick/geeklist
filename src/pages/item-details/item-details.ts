@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { JogoPage } from '../jogo/jogo';
-import { Item } from '../item';
 
 /**
  * Generated class for the ItemDetailsPage page.
@@ -17,8 +15,10 @@ import { Item } from '../item';
 })
 export class ItemDetailsPage {
 
-  itemDetails: Item;
-  itemDetails = passItem();
+  itemDetails = {
+    title: 'The Legend of Zelda: Breath of the Wild', genre: 'Action, Adventure',
+    developer: 'Nintendo', release: 2017, rate: 9.7
+  }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

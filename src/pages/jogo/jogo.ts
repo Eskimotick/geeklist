@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { ItemDetailsPage } from '../item-details/item-details';
 import { Item } from '../item';
 import { List } from '../list';
@@ -26,7 +26,7 @@ export class JogoPage {
       { id: 3, name: 'Não jogados'}
   ];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }
 
@@ -42,10 +42,10 @@ export class JogoPage {
     return this.shownGroup === group;
   };
 
-  onSelect(item: Item):void {
-    this.navCtrl.setRoot(ItemDetailsPage);
-  }
-
-
+  showModal(item):void {
+    const detailsModal = this.modalCtrl.create('ItemDetailsPage', { id: item.id }); //o segundo parâmetro passa o
+    detailsModal.present();                                                      //parâmetro que você deseja passar
+  }                                                                              //para a seguinte página
+                                                                                //(no nosso caso, o id)
 
 }

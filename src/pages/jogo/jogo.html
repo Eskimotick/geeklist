@@ -16,7 +16,7 @@
         <div *ngIf="isGroupShown(i)">
           <div *ngFor='let item of itens'>
             <div *ngIf='(item.id == list.id)'>
-              <button (click)="onSelect(item)" ion-item>
+              <button (click)="showModal(item)" ion-item>
                 {{ item.name }}
                 <ion-icon name="arrow-forward" id="arrow" item-end></ion-icon>
               </button>

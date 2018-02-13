@@ -6,20 +6,22 @@
   </ion-navbar>
 </ion-header>
 <ion-content id ="jogo-background" class="cards-bg">
-  <div *ngFor='let list of lists'>
+  <div *ngFor='let list of lists; let i=index' (click)='toggleGroup(i)' [ngClass]='{active: isGroupShown(i)}'>
     <br>
     <ion-card class="cards-list">
       <ion-card-header *ngIf="list">
         <b>{{ list.name }}</b>
       </ion-card-header>
       <ion-list>
-        <div *ngFor='let item of itens'>
+        <div *ngIf="isGroupShown(i)">
+          <div *ngFor='let item of itens'>
             <div *ngIf='(item.id == list.id)'>
               <button (click)="onSelect(item)" ion-item>
                 {{ item.name }}
                 <ion-icon name="arrow-forward" id="arrow" item-end></ion-icon>
               </button>
             </div>
+          </div>
         </div>
       </ion-list>
     </ion-card>

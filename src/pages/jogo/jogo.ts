@@ -10,6 +10,8 @@ import { List } from '../list';
 })
 export class JogoPage {
 
+  shownGroup = null;
+
   itens: Item[] = [
      { id: 1, name: 'The Legend of Zelda: Breath of the Wild'},
      { id: 1, name: 'Super Mario Odissey'},
@@ -28,8 +30,22 @@ export class JogoPage {
 
   }
 
+  toggleGroup(group) {
+    if (this.isGroupShown(group)) {
+        this.shownGroup = null;
+    } else {
+        this.shownGroup = group;
+    }
+  };
+
+  isGroupShown(group) {
+    return this.shownGroup === group;
+  };
+
   onSelect(item: Item):void {
     this.navCtrl.setRoot(ItemDetailsPage);
   }
+
+
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { JogoPage } from '../jogo/jogo';
 import { AnimePage } from '../anime/anime';

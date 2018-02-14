@@ -25,8 +25,6 @@ export class ItemDetailsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemDetailsPage');
-    this.myNewParametro = this.navParams.get('id');
-
   }
 
 }
